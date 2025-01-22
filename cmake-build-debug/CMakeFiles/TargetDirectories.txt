@@ -1,0 +1,3 @@
+C:/Users/iTempura/Documents/Chroma++/cmake-build-debug/CMakeFiles/Chroma++.dir
+C:/Users/iTempura/Documents/Chroma++/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iTempura/Documents/Chroma++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
