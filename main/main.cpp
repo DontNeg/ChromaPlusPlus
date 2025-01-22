@@ -4,9 +4,12 @@
 using namespace std;
 using namespace dpp;
 
-const std::string BOT_TOKEN = "";
-
 int main() {
+    string BOT_TOKEN;
+    ifstream tokenFile;
+    tokenFile.open("../token.txt");
+    tokenFile >> BOT_TOKEN;
+    tokenFile.close();
     cluster bot(BOT_TOKEN);
     bot.on_log(utility::cout_logger());
     bot.on_slashcommand([](const slashcommand_t& event) {
