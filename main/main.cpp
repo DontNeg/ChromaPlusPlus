@@ -7,7 +7,6 @@ using namespace dpp;
 const std::string BOT_TOKEN = "";
 
 int main() {
-    string main = "";
     cluster bot(BOT_TOKEN);
     bot.on_log(utility::cout_logger());
     bot.on_slashcommand([](const slashcommand_t& event) {
