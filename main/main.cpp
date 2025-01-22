@@ -1,16 +1,12 @@
 #include "main.h"
 #include "../CleanUp/CleanUp.h"
+#include "../negenv.h"
 
 using namespace std;
 using namespace dpp;
 
 int main() {
-    string BOT_TOKEN;
-    ifstream tokenFile;
-    tokenFile.open("../token.txt");
-    tokenFile >> BOT_TOKEN;
-    tokenFile.close();
-    cluster bot(BOT_TOKEN);
+    cluster bot(NegEnv::getEnv("TOKEN", "token.env"));
     bot.on_log(utility::cout_logger());
     bot.on_slashcommand([](const slashcommand_t& event) {
         switch(main::stoa(event.command.get_command_name())) {
