@@ -1,7 +1,15 @@
 # ninja log v6
-8	10091	7592428526728863	CMakeFiles/Chroma++.dir/CleanUp/CleanUp.cpp.obj	b878fc402862296e
-4	10259	7592428526688617	CMakeFiles/Chroma++.dir/main/main.cpp.obj	aaf56caeea7bfa37
-10259	11795	7592428629239970	Chroma++.exe	7873c014e071322d
 9	11382	7592430123863090	CMakeFiles/Chroma++.dir/CleanUp/CleanUp.cpp.obj	848e5c51e9afc5b4
-4	11405	7592430123823013	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
-11405	12676	7592430237829706	Chroma++.exe	6b8240059e93d19f
+4	9881	7592442366659544	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+9882	10748	7592442465433866	Chroma++.exe	6b8240059e93d19f
+8	10181	7592442993835819	CMakeFiles/Chroma++.dir/CleanUp/CleanUp.cpp.obj	848e5c51e9afc5b4
+4	10268	7592442993795595	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+10268	11695	7592443096435420	Chroma++.exe	6b8240059e93d19f
+4	9075	7592443281303401	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+9076	9913	7592443372028158	Chroma++.exe	6b8240059e93d19f
+4	9097	7592444693204749	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+9098	10359	7592444784130999	Chroma++.exe	6b8240059e93d19f
+4	9128	7592444979019007	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+9129	10002	7592445070262522	Chroma++.exe	6b8240059e93d19f
+5	9077	7592446435590021	CMakeFiles/Chroma++.dir/main/main.cpp.obj	929a7b40ab7889ca
+9077	10010	7592446526313657	Chroma++.exe	6b8240059e93d19f

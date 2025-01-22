@@ -11,6 +11,6 @@
 -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (1.7s)
--- Generating done (0.1s)
+-- Configuring done (2.0s)
+-- Generating done (0.0s)
 -- Build files have been written to: C:/Users/iTempura/Documents/Chroma++/cmake-build-debug
