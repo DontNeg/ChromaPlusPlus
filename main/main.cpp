@@ -31,10 +31,7 @@ int main() {
                 break;
             }
             case 617: { //Header
-                event.reply(CleanUp::header(
-                    get<string>(event.get_parameter("message")),
-                    get<string>(event.get_parameter("header_size"))
-                ));
+                event.reply(headerTypes.at(get<string>(event.get_parameter("header_size"))) + " " + get<string>(event.get_parameter("message")));
                 break;
             }
             default: {
@@ -43,36 +40,31 @@ int main() {
         }
     });
     bot.on_ready([&bot](const ready_t& event) {
-        const vector<string> colors = {"gray","red","green","orange","blue","pink","cyan","white"};
-        const vector<string> bgColors = {"dark blue","orange", "even darker gray","dark gray","gray","purple","light gray","white"};
-        const vector<string> mods = {"bold","italic","strikethrough","underline"};
-        const vector<string> headerType = {"large", "medium", "small"};
         //Color Options
-        command_option colorOption = command_option(co_string, "color", "Color you want the text to be.", true);
-        command_option backgroundColorOption = command_option(co_string, "background_color", "Color you want the text to be.", false);
+        auto colorOption = command_option(co_string, "color", "Color you want the text to be.", true);
+        auto backgroundColorOption = command_option(co_string, "background_color", "Color you want the text to be.", false);
 
         //Modifier Options
-        command_option modifierOptionOne = command_option(co_string, "modifier_one", "First modifier you want applied.", true);
-        command_option modifierOptionTwo = command_option(co_string, "modifier_two", "Second modifier you want applied.", false);
-        command_option modifierOptionThree = command_option(co_string, "modifier_three", "Third modifier you want applied.", false);
-        command_option modifierOptionFour = command_option(co_string, "modifier_four", "Fourth modifier you want applied.", false);
-
+        auto modifierOptionOne = command_option(co_string, "modifier_one", "First modifier you want applied.", true);
+        auto modifierOptionTwo = command_option(co_string, "modifier_two", "Second modifier you want applied.", false);
+        auto modifierOptionThree = command_option(co_string, "modifier_three", "Third modifier you want applied.", false);
+        auto modifierOptionFour = command_option(co_string, "modifier_four", "Fourth modifier you want applied.", false);
         //Header Option
-        command_option headerOption = command_option(co_string, "header_size", "Size you want the header to be.", true);
+        auto headerOption = command_option(co_string, "header_size", "Size you want the header to be.", true);
 
-        for(const string& color: colors) {
+        for(auto &color: colorOptions | views::keys) {
             CleanUp::addChoice(colorOption, color);
         }
-        for(const string& color: bgColors) {
+        for(auto &color: bgColors | views::keys) {
             CleanUp::addChoice(backgroundColorOption, color);
         }
-        for(const string& mod: mods) {
+        for(const auto &mod: modifierOptions | views::keys) {
             CleanUp::addChoice(modifierOptionOne, mod);
             CleanUp::addChoice(modifierOptionTwo, mod);
             CleanUp::addChoice(modifierOptionThree, mod);
             CleanUp::addChoice(modifierOptionFour, mod);
         }
-        for(const string& size: headerType) {
+        for(auto &size: headerTypes | views::keys) {
             CleanUp::addChoice(headerOption, size);
         }
         if (run_once<struct register_bot_commands>()) {
